@@ -13,10 +13,21 @@ WriteMakefile(
     NAME               => 'B::Hooks::OP::Check::LeaveEval',
     VERSION_FROM       => 'lib/B/Hooks/OP/Check/LeaveEval.pm',
     ABSTRACT_FROM      => 'lib/B/Hooks/OP/Check/LeaveEval.pm',
-    LIBS               => [''],
-    DEFINE             => '',
-    INC                => '-I.',
+    MIN_PERL_VERSION   => '5.10.1',
     LICENSE            => 'perl',
     CONFIGURE_REQUIRES => { 'version' => 0 },
+    test               => { TESTS => 't/*.t' },
+    eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (
+        META_MERGE => {
+            'meta-spec' => { version => 2 },
+            resources   => {
+                repository => {
+                    type => 'git',
+                    url  => 'https://github.com/s-nez/b-hooks-op-check-leaveeval.git',
+                    web  => 'https://github.com/s-nez/b-hooks-op-check-leaveeval',
+                },
+            },
+        },
+    ) : (),
     $pkg->get_makefile_vars(),
 );
