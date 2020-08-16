@@ -10,3 +10,5 @@ t/basic.t
 t/lib/Bar.pm
 t/lib/Foo.pm
 t/sub_wrap.t
+xt/kwalitee.t
+xt/manifest.t
