@@ -3,6 +3,7 @@ use warnings;
 
 use ExtUtils::Depends;
 use ExtUtils::MakeMaker;
+use ExtUtils::MakeMaker::CPANfile;
 
 my $pkg = ExtUtils::Depends->new(
     'B::Hooks::OP::Check::LeaveEval',
