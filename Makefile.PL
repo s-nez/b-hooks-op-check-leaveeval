@@ -16,7 +16,6 @@ WriteMakefile(
     ABSTRACT_FROM      => 'lib/B/Hooks/OP/Check/LeaveEval.pm',
     MIN_PERL_VERSION   => '5.10.1',
     LICENSE            => 'perl',
-    CONFIGURE_REQUIRES => { 'version' => 0 },
     test               => { TESTS => 't/*.t' },
     eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (
         META_MERGE => {
