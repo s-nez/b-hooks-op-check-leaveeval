@@ -9,4 +9,5 @@ on test => sub {
 on configure => sub {
     requires 'version', '0.77';
     requires 'ExtUtils::Depends';
+    requires 'ExtUtils::MakeMaker::CPANfile';
 };
