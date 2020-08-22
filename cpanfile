@@ -3,6 +3,7 @@ requires 'ExtUtils::Depends';
 
 on test => sub {
     requires 'Test::More', '1.302170';
+    requires 'Test::LeakTrace', '0.16';
 };
 
 on configure => sub {
